@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-black: #13103F;
+  --color-transparent: transparent;
+  --color-yellow: #FFFD01;
+  --color-white: #FFFFFF;
+  --color-blue: #13103F;
+  --color-grey: #3B3B3C;
+
+  --text-*: initial;
+  --text-paragraph: 1.875rem;
+  --text-paragraph--font-weight: 500;
+  --text-paragraph-line-height: 2.5rem;
+  --text-subheading: 3.125rem;
+  --text-subheading--font-weight: 700;
+  --text-subheading--line-height: 3.75rem;
+  --text-heading: 5.625rem;
+  --text-heading--font-weight: 700;
+  --text-heading--line-height: 6.25rem;
+
+  --breakpoint-*: initial;
+  --breakpoint-phone: 425px;
+  --breakpoint-tablet: 800px;
+  --breakpoint-desktop-small: 1280px;
+  --breakpoint-desktop: 1920px;
+}
