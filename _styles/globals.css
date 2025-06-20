@@ -2,27 +2,141 @@
 
 @theme {
   --color-*: initial;
-  --color-black: #13103F;
+  --color-black: #000000;
   --color-transparent: transparent;
   --color-yellow: #FFFD01;
   --color-white: #FFFFFF;
   --color-blue: #13103F;
   --color-grey: #3B3B3C;
+  --color-link-blue: #0000ff;
+
+  --font-poppins: var(--font-poppins);
 
   --text-*: initial;
-  --text-paragraph: 1.875rem;
+
+  --text-paragraph: 1.25rem;
   --text-paragraph--font-weight: 500;
-  --text-paragraph-line-height: 2.5rem;
-  --text-subheading: 3.125rem;
+  --text-paragraph--line-height: 1.875rem;
+  --text-paragraph-desktop: 1.875rem;
+  --text-paragraph-desktop--font-weight: 500;
+  --text-paragraph-desktop--line-height: 2.5rem;
+
+  --text-subheading: 2.5rem;
   --text-subheading--font-weight: 700;
-  --text-subheading--line-height: 3.75rem;
-  --text-heading: 5.625rem;
+  --text-subheading--line-height: 3.125rem;
+  --text-subheading-desktop: 3.75rem;
+  --text-subheading-desktop--font-weight: 700;
+  --text-subheading-desktop--line-height: 3.75rem;
+
+  --text-heading: 3.75rem;
   --text-heading--font-weight: 700;
-  --text-heading--line-height: 6.25rem;
+  --text-heading--line-height: 4.375rem;
+  --text-heading-desktop: 5.625rem;
+  --text-heading-desktop--font-weight: 700;
+  --text-heading-desktop--line-height: 6.25rem;
 
   --breakpoint-*: initial;
   --breakpoint-phone: 425px;
-  --breakpoint-tablet: 800px;
-  --breakpoint-desktop-small: 1280px;
-  --breakpoint-desktop: 1920px;
+  --breakpoint-tablet: 1000px;
+  --breakpoint-desktop: 1440px;
+
+  --padding-18px: 18px;
+  --padding-50px: 50px;
+  --padding-100px: 100px;
+  --padding-120px: 120px;
+  --padding-150px: 150px;
+
+  --margin-18px: 18px;
+  --margin-50px: 50px;
+  --margin-100px: 100px;
+  --margin-120px: 120px;
+  --margin-150px: 150px;
+
+  --gap-18px: 18px;
+  --gap-50px: 50px;
+  --gap-100px: 100px;
+  --gap-120px: 120px;
+  --gap-150px: 150px;
+
+  --space-18px: 18px;
+  --space-50px: 50px;
+  --space-100px: 100px;
+  --space-120px: 120px;
+  --space-150px: 150px;
+}
+
+@layer components {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    color: #202020;
+    font-family: 'Poppins', sans-serif;
+    @apply underline-offset-4 font-poppins text-black;
+  }
+
+  h1,
+  h2 {
+    @apply text-heading desktop:text-heading-desktop text-blue;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-subheading desktop:text-subheading-desktop text-blue;
+  }
+
+  p {
+    @apply text-paragraph desktop:text-paragraph-desktop;
+  }
+
+  input,
+  textarea {
+    @apply text-black font-thin;
+  }
+
+  button {
+    @apply text-[1.5625rem] leading-[2.5rem] font-bold desktop:text-paragraph-desktop
+  }
+
+  a, button {
+    @apply cursor-pointer hover:desktop:text-link-blue ease-in-out duration-300;
+  }
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid transparent;
+  border-top-color: #719A94;
+  animation: spin 1s linear infinite;
+}
+
+.spinner::after {
+  animation-delay: 0.5s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

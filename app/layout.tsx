@@ -10,6 +10,7 @@ const poppinsFont = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://automarketplaceqld.com.au"),
   title: "Auto Marketplace QLD - Australia",
   description:
     "Auto Marketplace QLD is your trusted online portal for selling vehicles across Queensland. Whether you’re upgrading, downsizing, or simply ready to move on, we’re here to make it easy, fast, and secure to sell your car with confidence. Sell smarter and faster every time.",
