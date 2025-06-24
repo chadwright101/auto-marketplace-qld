@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="px-18px tablet:px-50px desktop:px-120px max-w-[1920px] mx-auto">
+    <div className="px-5 tablet:px-50px desktop:px-120px max-w-[1920px] mx-auto">
       <h1>Heading</h1>
       <h3>Subheading</h3>
       <button>Button {">>>"}</button>
